@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/lax.js" ></script>
+    <title>CSS GRID</title>
+</head>
+<body>
+    <!-- <div class="main">
+        <div class="container1 box">HEY</div>
+        <div class="container2 box">HEY</div>
+        <div class="container3 box">HEY</div>
+    </div> -->
+    <section class="intro">
+        <p class="scroll-text">Scroll Down</p>
+    </section>
+    <section class="anim">
+        <h1 class="lax" data-lax-preset="fadeIn crazy driftLeft">Animation</h1>
+        <p class="desc lax" data-lax-preset="blurIn rightToLeft-0.1">Check out this nifty little scroll based animation with laxxx.js </p>
+        <div class="boxe1 lax" data-lax-rotate="0 0 , 1500 245"></div>
+        <div class="boxe2 lax" data-lax-scale="0 0, 800 2,1600 1"></div>
+    </section>
+    <section></section>
+    <script>
+        window.onload = function() {
+	lax.setup() // init
+
+	const updateLax = () => {
+		lax.update(window.scrollY)
+		window.requestAnimationFrame(updateLax)
+	}
+
+	window.requestAnimationFrame(updateLax)
+}
+    </script>
+</body>
+</html>
